@@ -82,6 +82,14 @@
                     
                         <li class="menu-item">
                             <a class=""
+                               href="/personal-blog/records"
+                            >
+                                动手操作记录
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
                                href="/personal-blog/about"
                             >
                                 关于
@@ -116,6 +124,11 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/personal-blog/store">MY STORE</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/personal-blog/records">动手操作记录</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -222,63 +235,6 @@
         
 
         
-            <div class="comment-container">
-                <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments">&nbsp;评论</i>
-    </div>
-    
-
-        
-            
-    <div id="gitalk-container"></div>
-    <script 
-            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script >
-
-        function loadGitalk() {
-            let __gitalk__pathname = decodeURI(location.pathname);
-            const __gitalk__pathnameLength = __gitalk__pathname.length;
-            const __gitalk__pathnameMaxLength = 50;
-            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
-                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
-            }
-
-            try {
-                Gitalk && new Gitalk({
-                    clientID: '6acfc6706a6b19d66ea5# GitHub Application Client ID',
-                    clientSecret: '70ef76f39be1f055406f078ae1912678f8265e6f# GitHub Application Client Secret',
-                    repo: 'remarks# Repository name to store issues',
-                    owner: 'Django888# GitHub repo owner',
-                    admin: ['Django888# GitHub repo owner'],
-                    id: __gitalk__pathname,
-                    language: 'zh-CN'
-                }).render('gitalk-container');
-
-            } catch (e) {
-                window.Gitalk = null;
-            }
-        }
-
-        if ('false') {
-            const loadGitalkTimeout = setTimeout(() => {
-                loadGitalk();
-                clearTimeout(loadGitalkTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadGitalk);
-        }
-    </script>
-
-
-
-        
-    
-</div>
-
-            </div>
-        
     </div>
 </div>
 
@@ -319,10 +275,6 @@
         
 
         <!-- go comment -->
-        
-            <li class="go-comment">
-                <i class="fas fa-comment"></i>
-            </li>
         
     </ul>
 </div>
